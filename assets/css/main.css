@@ -59,6 +59,8 @@
   --regular: 'Roboto-Regular';
   --medium: 'Roboto-Medium';
   --bold: 'Roboto-Bold';
+  --page-width: 1200px;
+  --grid-rows: 56px calc(100vh - 56px);
 }
 
 html, body {
@@ -69,12 +71,11 @@ html, body {
 }
 
 body {
-  max-width: 1200px; /* layout dimensions */
-  max-height: 816px;
+  max-width: var(--page-width); /* layout dimensions */
   margin: auto;
   display: grid;
   grid-template-columns: 60px 540px 600px;
-  grid-template-rows: 56px 100%;
+  grid-template-rows: var(--grid-rows);
 }
 
 button, input {
@@ -194,7 +195,7 @@ ul.main-menu {
 ul.main-menu > li:first-child {
   display: grid;
   grid-template-columns: 60px 125px;
-  grid-template-rows: 56px calc(100vh - 56px);
+  grid-template-rows: var(--grid-rows);
 }
 
 ul.main-menu > li:first-child > button {
